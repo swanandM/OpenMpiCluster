@@ -4,23 +4,23 @@ Before using the anscible scripts
 
 ### Install ANSIBLE
 
-$ sudo apt-get install software-properties-common
+    $ sudo apt-get install software-properties-common
 
-$ sudo apt-add-repository ppa:ansible/ansible			
+    $ sudo apt-add-repository ppa:ansible/ansible			
 
-$ sudo apt-get update
+    $ sudo apt-get update
 
-$ sudo apt-get install ansible
+    $ sudo apt-get install ansible
 
 ### Install git
 
-$ sudo apt-get install git
+    $ sudo apt-get install git
 
 ### Generate a key pair for the main server or master server
 
-$ cd .ssh
+    $ cd .ssh
 
-$ ssh-keygen -t dsa
+    $ ssh-keygen -t dsa
 
 ### Add the generated public key into authorized keys of all the servers in the cluster including the main node
 
