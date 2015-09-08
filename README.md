@@ -1,4 +1,4 @@
-# OpenMpiCluster
+## OpenMpiCluster
 
 Before using the anscible scripts
 
