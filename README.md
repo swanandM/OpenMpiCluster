@@ -25,7 +25,7 @@ Before using the anscible scripts
 ### Add the generated public key into authorized keys of all the servers in the cluster including the main node
 
 ### Edit /etc/ansible/hosts (ansible inventory file) its always good to have a backup of hosts
-    We use local label for the main node and web label for rest of the servers.
+We use local label for the main node and web label for rest of the servers.
 The file should look something like this
 
     [web]
@@ -39,7 +39,9 @@ The file should look something like this
     hpc-main ansible_ssh_host=127.0.0.1
 
 ### Create the host_vars yml files for each server
-    Each server has to have its own file in host_vars with its ansible inventory name as title. These files are used to determine some essential parameters while building the cluster. There are the files which are used to add users. Here is how they look like
+Each server has to have its own file in host_vars with its ansible inventory name as title. 
+These files are used to determine some essential parameters while building the cluster.
+There are the files which are used to add users. Here is how they look like
     
     ---
     users:
@@ -70,4 +72,4 @@ The file should look something like this
     
     
     
-    For example in /etc/ansible/hosts we created a  
+   
