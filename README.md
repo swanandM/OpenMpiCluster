@@ -39,7 +39,7 @@ The file should look something like this
     hpc-main ansible_ssh_host=127.0.0.1
 
 ### Git clone OpenMpiCluster repo
-    git clone 
+    git clone https://github.com/mk01github/OpenMpiCluster.git
 
 ### Create the host_vars yml files for each server
 Each server has to have its own file in host_vars with its ansible inventory name as title. 
@@ -68,7 +68,8 @@ There are the files which are used to add users. Here is how they look like
 
     mainPubKeyPath: "{{ lookup('file', '~/.ssh/id_dsa.pub') }}"
 
-    
+
+### Did not complete this yet will be working on it soon    
 
     
     
