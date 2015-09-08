@@ -1,21 +1,21 @@
-## OpenMpiCluster
+# OpenMpiCluster
 
 Before using the anscible scripts
 
-# Install ANSIBLE
+## Install ANSIBLE
 
 sudo apt-get install software-properties-common
 sudo apt-add-repository ppa:ansible/ansible				
 sudo apt-get update
 sudo apt-get install ansible
 
-# Install git
+## Install git
 
 sudo apt-get install git
 
-# Generate a key pair for the main server or master server
+## Generate a key pair for the main server or master server
 
-$ cd .ssh
+$ cd .ssh\n
 $ ssh-keygen -t dsa
 
 #
