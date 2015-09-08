@@ -38,6 +38,9 @@ The file should look something like this
 
     hpc-main ansible_ssh_host=127.0.0.1
 
+### Git clone OpenMpiCluster repo
+    git clone 
+
 ### Create the host_vars yml files for each server
 Each server has to have its own file in host_vars with its ansible inventory name as title. 
 These files are used to determine some essential parameters while building the cluster.
