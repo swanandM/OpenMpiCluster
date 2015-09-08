@@ -1,0 +1,29 @@
+---
+ - name: Add SSH public key to user remote
+   authorized_key:
+      user={{ item.key }}
+      key="{{ item.value.pubKey }}"
+   with_dict: users
+   sudo: yes
+ - name: Send private key to all users
+   copy: src={{ item.value.privKeyPath }} dest=/home/{{ item.key }}/.ssh/key
+   sudo: yes
+   with_dict: users
+
+ - name: Send pub key to all users
+   copy: src={{ item.value.pubKeyPath }} dest=/home/{{ item.key }}/.ssh/key.pub
+   sudo: yes
+   with_dict: users
+ - name: Appending lines to .bashrc
+   lineinfile: dest=/home/{{ item.key }}/.bashrc line="chmod +x .ssh/authorized_keys"
+   sudo: yes
+   with_dict: users
+ - name: Appending lines to .bashrc
+   lineinfile: dest=/home/{{ item.key }}/.bashrc line="eval `ssh-agent -s`"
+   sudo: yes
+   with_dict: users
+ - name: Appending lines to .bashrc
+   lineinfile: dest=/home/{{ item.key }}/.bashrc line="ssh-add .ssh/key"
+   sudo: yes
+   with_dict: users
+

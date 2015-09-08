@@ -1,0 +1,26 @@
+---
+- include: create_keys.yml
+
+- hosts: all
+  tasks:
+    - name: Add users from the host_vars file
+      user:
+           name={{ item.key }}
+           password={{ item.value.password }} 
+           shell=/bin/bash     
+      with_dict: users
+      sudo: yes
+
+    - name: Appending lines to .bashrc  
+      lineinfile: dest=/home/{{ item.key }}/.bashrc line="cd"
+      sudo: yes
+      with_dict: users
+
+    - name: Add SSH public key to user remote
+      authorized_key:
+        user={{ item.key }}
+        key="{{ mainPubKeyPath }}"
+      with_dict: users     
+      sudo: yes
+
+    - include: add_public_key.yml 

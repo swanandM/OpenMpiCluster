@@ -1,0 +1,28 @@
+---
+ users:
+   hpc_usr_1:
+         password: $1$lZ6yqS5j$z9VaNiJ9UEBqxsPewMaoV/
+         pubKey: "{{ lookup('file', '~/keys/key_1.pub') }}"
+         privKeyPath: '/home/ubuntu/keys/key_1'
+         pubKeyPath: '/home/ubuntu/keys/key_1.pub'
+
+   hpc_usr_2:
+         password: $1$lZ6yqS5j$z9VaNiJ9UEBqxsPewMaoV/
+         pubKey: "{{ lookup('file', '~/keys/key_2.pub') }}"
+         privKeyPath: '/home/ubuntu/keys/key_2'
+         pubKeyPath: '/home/ubuntu/keys/key_2.pub'
+
+   hpc_usr_3:
+         password: $1$lZ6yqS5j$z9VaNiJ9UEBqxsPewMaoV/
+         pubKey: "{{ lookup('file', '~/keys/key_3.pub') }}"
+         privKeyPath: '/home/ubuntu/keys/key_3'
+         pubKeyPath: '/home/ubuntu/keys/key_3.pub'
+
+   hpc_usr_4:
+         password: $1$lZ6yqS5j$z9VaNiJ9UEBqxsPewMaoV/
+         pubKey: "{{ lookup('file', '~/keys/key_4.pub') }}"
+         privKeyPath: '/home/ubuntu/keys/key_4'
+         pubKeyPath: '/home/ubuntu/keys/key_4.pub'
+
+
+ mainPubKeyPath: "{{ lookup('file', '~/.ssh/id_dsa.pub') }}"

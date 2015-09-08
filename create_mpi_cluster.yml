@@ -1,0 +1,35 @@
+---
+- include: create_users.yml
+
+- hosts: all
+  tasks:
+     - name: Install c compiler
+       apt: name=g++ state=present
+     - name: Install openmpi-bin
+       apt: name=openmpi-bin state=present
+     - name: Install openmpi-common
+       apt: name=openmpi-common state=present
+     - name: Install libopenmpi1.6
+       apt: name=libopenmpi1.6 state=present 
+     - name: Install libopenmpi-dev
+       apt: name=libopenmpi-dev state=present
+     - name: Installing python-dev
+       apt: name=python-dev state=present
+     - name: Installing numpy
+       apt: name=python-numpy state=present
+     - name: Installing scipy
+       apt: name=python-scipy state=present
+     - name: installing pip
+       apt: name=python-pip state=present
+     - name: installing mpi4py
+       pip: name=mpi4py
+     - name: Installing git
+       apt: name=git state=present
+     - name: Downloading mpi4py examples from git
+       git: repo=https://github.com/mk01github/mpi4py_examples.git 
+            dest=/home/{{ item.key }}/mpi4py_examples/
+       with_dict: users
+      
+        
+  sudo: yes
+ 
