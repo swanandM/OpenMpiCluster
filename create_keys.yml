@@ -2,7 +2,7 @@
 - hosts: local
   tasks:
     - name: Generating keys for all users
-      script: ~/anscible-dir/gen_keys.sh 5   
+      script: ~/OpenMpiCluster/gen_keys.sh 6   
       
 
      
