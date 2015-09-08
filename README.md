@@ -15,7 +15,8 @@ sudo apt-get install git
 
 ## Generate a key pair for the main server or master server
 
-$ cd .ssh\n
+$ cd .ssh
+
 $ ssh-keygen -t dsa
 
 #
