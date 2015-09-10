@@ -26,4 +26,8 @@
    lineinfile: dest=/home/{{ item.key }}/.bashrc line="ssh-add .ssh/key"
    sudo: yes
    with_dict: users
+ - name: Send mpihosts to all users
+   copy: src=/home/ubuntu/mpiHosts dest=/home/{{ item.key }}/
+   sudo: yes
+   with_dict: users
 

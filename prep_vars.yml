@@ -1,0 +1,8 @@
+---
+- hosts: local
+  tasks:
+    - name: Preparing host_vars files 
+      script: ~/OpenMpiCluster/prep_host_vars.sh 
+      
+
+     
