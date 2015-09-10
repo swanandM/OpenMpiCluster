@@ -2,9 +2,10 @@
 
 This project helps setting up an OpenMpi cluster with as many nodes and user accounts specified. This project has ancible scripts that help in automation of the cluster building process. The project has been tested in ubuntu 14.04 and works flawless. This needs some more testing at this point of time. The instructions are crude and need to be polished so please bear with this. For assistance please email me. 
 
-## Working to setup the environment before starting the cluster building process
+## Preparing the environment before starting the cluster building process
 
-### Install ANSIBLE
+### Install ANSIBLE 
+Install ansible in all the servers.
 
     $ sudo apt-get install software-properties-common
 
@@ -24,9 +25,10 @@ This project helps setting up an OpenMpi cluster with as many nodes and user acc
 
     $ ssh-keygen -t dsa
 
-### Add the generated public key into authorized keys of all the servers in the cluster including the main node
+Add the generated public key into authorized keys of all the servers in the cluster including the main node
 
-### Edit /etc/ansible/hosts (ansible inventory file) its always good to have a backup of hosts
+### Creating ansible inventory file
+Edit /etc/ansible/hosts (ansible inventory file) its always good to have a backup of hosts
 We use local label for the main node and web label for rest of the servers.
 The file should look something like this
 
