@@ -45,6 +45,7 @@ The file should look something like this
 
 ### To add more users edit the host_vars/hpc file 
 This is a template file which we use to specify the names of users necessary. This file has some more parameters which are key in copying the key-pairs across the users in different serves. The hpc looks somthing like this.
+
     ---
     users:
        hpc_usr_1:
