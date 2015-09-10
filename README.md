@@ -106,6 +106,6 @@ test_all.py script in mpi4py examples folder gets the status of all the servers.
     
 
    
-### Wrote all the instructions in a hurry .. sorry if they are confusing.. send me an email if you need some assistance.. mkumar2301@gmail.com.. 
+Wrote all the instructions in a hurry .. sorry if they are confusing.. send me an email if you need some assistance.. mkumar2301@gmail.com.. 
 
-### Work in progress !!
+
