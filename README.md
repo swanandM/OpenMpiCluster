@@ -72,7 +72,8 @@ There are the files which are used to add users. Here is how they look like
 ### Did not complete this yet will be working on it soon    
 
     
-    
+    mpirun -np 2 -machinefile mpiHosts python mpi4py_examples/data_xchng.py
+ 
     
     
     
