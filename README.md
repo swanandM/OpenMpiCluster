@@ -31,13 +31,9 @@ We use local label for the main node and web label for rest of the servers.
 The file should look something like this
 
     [web]
-
     hpc-test-2 ansible_ssh_host=10.242.148.231
-
     hpc-test ansible_ssh_host=10.242.148.230
-
     [local]
-
     hpc-main ansible_ssh_host=127.0.0.1
 
 ### Git clone OpenMpiCluster repo
