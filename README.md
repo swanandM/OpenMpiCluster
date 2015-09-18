@@ -106,6 +106,9 @@ test_all.py script in mpi4py examples folder gets the status of all the servers.
 
 ## Helpful scripts     
 ### To copy the files across the cluster use copy_file.yml 
+Once the cluster is set up, sending the files or scripts across the instances is not easy.
+For this reason an extra script is copied across all servers and user. This script helps in
+copying the files across the server once the path is specified
 
     ansible-playbook copy_file.yml
 
