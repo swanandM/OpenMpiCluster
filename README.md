@@ -102,7 +102,9 @@ Inside each usr home directory there is a mpi4pyexamples folder and a mpiHosts f
 test_all.py script in mpi4py examples folder gets the status of all the servers. here is how you run it
 
     mpirun -np 2 -machinefile mpiHosts python mpi4py_examples/test_all.py
-    
+
+
+## Helpful scripts     
 ### To copy the files across the cluster use copy_file.yml 
 
     ansible-playbook copy_file.yml
