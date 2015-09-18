@@ -1,0 +1,6 @@
+---
+ - hosts: all
+   tasks:
+       - name: Copy files across
+         copy: src=<absolute path> dest=<absolute path>
+
