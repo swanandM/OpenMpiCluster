@@ -30,4 +30,8 @@
    copy: src=/home/ubuntu/mpiHosts dest=/home/{{ item.key }}/
    sudo: yes
    with_dict: users
+ - name: Send copy script to all users
+   copy: src=/home/ubuntu/OpenMpiCluster/copy_files.yml dest=/home/{{ item.key }}/
+   sudo: yes
+   with_dict: users
 
