@@ -103,6 +103,17 @@ test_all.py script in mpi4py examples folder gets the status of all the servers.
 
     mpirun -np 2 -machinefile mpiHosts python mpi4py_examples/test_all.py
     
+### To copy the files across the cluster use copy_file.yml 
+
+    ansible-playbook copy_file.yml
+
+In this script the absolute path for source and destination should be specified
+for example
+  ---
+    - hosts: all
+    tasks:
+       - name: Copy files across
+         copy: src=/home/hpc_usr_1/sample.txt dest=/home/hpc_usr_1/
 
    
 Wrote all the instructions in a hurry .. sorry if they are confusing.. send me an email if you need some assistance.. mkumar2301@gmail.com.. 
