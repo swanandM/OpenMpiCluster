@@ -110,11 +110,11 @@ test_all.py script in mpi4py examples folder gets the status of all the servers.
 In this script the absolute path for source and destination should be specified
 for example
 
----
- - hosts: all
-   tasks:
-       - name: Copy files across
-         copy: src=/home/hpc_usr_1/copy_files.yml dest=/home/hpc_usr_1/
+    ---
+     - hosts: all
+        tasks:
+        - name: Copy files across
+          copy: src=/home/hpc_usr_1/copy_files.yml dest=/home/hpc_usr_1/
 
 
    
