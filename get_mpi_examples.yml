@@ -1,7 +1,13 @@
 ---
 - hosts: all
   tasks:
-     - name: Downloading mpi4py examples from git
-       git: repo=https://github.com/mk01github/mpi4py_examples.git 
+     
+
+
+---
+ - hosts: all
+   tasks:
+       - name: Downloading mpi4py examples from git
+         git: repo=https://github.com/mk01github/mpi4py_examples.git 
             dest=/home/{{ item.key }}/mpi4py_examples/
-       with_dict: users
+         with_dict: users
