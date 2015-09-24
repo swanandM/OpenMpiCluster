@@ -11,5 +11,5 @@
             mode: u=rwx,g=rwx,o=rwx
             recurse: yes
          with_dict: users  
-
+   sudo: yes
 
