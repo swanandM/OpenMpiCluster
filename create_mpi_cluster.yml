@@ -28,5 +28,5 @@
        apt: name=git state=present
   sudo: yes
  
- - include: get_mpi_examples.yml
+- include: get_mpi_examples.yml
 
