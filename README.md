@@ -1,5 +1,5 @@
 # OpenMpiCluster
-
+( Working on version 2, will be following recommended directory structure from Ansible and may be part of CBDL OSCAR
 This project helps setting up an OpenMpi cluster with as many nodes and user accounts specified. This project has ancible scripts that help in automation of the cluster building process. The project has been tested in ubuntu 14.04 and works flawless. This needs some more testing at this point of time. The instructions are crude and need to be polished so please bear with this. For assistance please email me. 
 
 ## Preparing the environment before starting the cluster building process
